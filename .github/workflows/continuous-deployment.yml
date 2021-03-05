@@ -27,4 +27,4 @@ jobs:
         run: echo "Deploy"
 
       - name: Deploy production
-        run: "Deploy production"
+        run: echo "Deploy production"
