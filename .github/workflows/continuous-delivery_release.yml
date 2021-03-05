@@ -1,0 +1,25 @@
+name: Continuous Delivery
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build
+        run: yarn build
+
+      - name: Deploy staging
+        run: echo "Deploy"
+
+      - name: Deploy production
+        run: echo "Deploy production"
