@@ -27,9 +27,4 @@ jobs:
         run: echo "Deploy"
 
       - name: Deploy production
-        if: github.ref == 'refs/heads/master'
-        uses: jakejarvis/s3-sync-action@v0.5.0
-        with:
-          args: --acl public-read --follow-symlinks --delete
-        env:
-          AWS_S3_BUCKET: ${{ secrets.PRODUCTION_AWS_S3_BUCKET }}
+        run: "Deploy production"
